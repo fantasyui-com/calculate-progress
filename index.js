@@ -3,7 +3,7 @@ const padStart = require('lodash.padstart');
 const padEnd = require('lodash.padend');
 const truncate = require('lodash.truncate');
 
-module.exports = function(value, max){
+module.exports = function(value, max, options={fixedWidth:false}){
 
   const initial = (100.0 * value / max) ;
 
@@ -15,7 +15,9 @@ module.exports = function(value, max){
   b = new String(parseInt(b));
   b = truncate(b, {length:2,omission:''})
 
-  let response = padStart(a, 3, '0') + '.' + padEnd(b, 2, '0');
+  if(options.fixedWidth) a = padStart(a, 3, '0')
+
+  let response = a + '.' + padEnd(b, 2, '0');
 
   return response;
 
