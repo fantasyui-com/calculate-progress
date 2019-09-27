@@ -29,7 +29,7 @@ console.log( tpl + ' (fixed width mode).', result2 )
 
 ```bash
 
-[meow@hp-fedora calculate-progress]$ ./test.js
+[user@computer calculate-progress]$ ./test.js
 
 
 0 of 100 = 0.00% (in standard mode)
