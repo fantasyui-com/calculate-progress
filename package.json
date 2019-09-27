@@ -1,0 +1,26 @@
+{
+  "name": "calculate-progress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fantasyui-com/calculate-progress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fantasyui-com/calculate-progress/issues"
+  },
+  "homepage": "https://github.com/fantasyui-com/calculate-progress#readme",
+  "dependencies": {
+    "lodash.padend": "^4.6.1",
+    "lodash.padstart": "^4.6.1",
+    "lodash.round": "^4.0.4",
+    "lodash.truncate": "^4.4.2"
+  }
+}
