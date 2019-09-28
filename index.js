@@ -15,9 +15,16 @@ module.exports = function(value, max, options={fixedWidth:false}){
   b = new String(parseInt(b));
   b = truncate(b, {length:2,omission:''})
 
-  if(options.fixedWidth) a = padStart(a, 3, '0')
+  b = padEnd(b, 2, '0');
+  if(options.fixedWidth){
+     a = padStart(a, 3, '0');
+   }
 
-  let response = a + '.' + padEnd(b, 2, '0');
+  let response = a + '.' + b;
+
+  if(!options.fixedWidth){
+    response = response.replace(/\.00$/,'');
+  }
 
   return response;
 
